@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-03-21T09:57:09.246611" rpa="false" schemaversion="5">
+<suite id="s1" name="Form" source="C:\Users\gnaga\OneDrive\Desktop\aprendendo-robotframework\form.robot">
+<test id="s1-t1" name="Cenário 1: Preencher formulário" line="29">
+<kw name="Abrir navegador e acessar o site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T09:57:09.785170" level="INFO">Opening browser 'chrome' to base url 'https://testpages.eviltester.com/styled/validation/input-validation.html'.</msg>
+<msg time="2024-03-21T09:57:10.814417" level="WARN">The chromedriver version (122.0.6261.128) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>https://testpages.eviltester.com/styled/validation/input-validation.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T09:57:09.785170" elapsed="4.609701"/>
+</kw>
+<status status="PASS" start="2024-03-21T09:57:09.783176" elapsed="4.611695"/>
+</kw>
+<kw name="Preencher campos">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T09:57:14.402851" level="INFO">Typing text 'Gabriela' into text field 'id:firstname'.</msg>
+<arg>${input_first_name}</arg>
+<arg>Gabriela</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T09:57:14.401853" elapsed="0.790329"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T09:57:15.193180" level="INFO">Typing text 'Testando da Silva' into text field 'id:surname'.</msg>
+<arg>${input_last_name}</arg>
+<arg>Testando da Silva</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T09:57:15.192182" elapsed="0.384971"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T09:57:15.578150" level="INFO">Typing text '21' into text field 'id:age'.</msg>
+<arg>${input_age}</arg>
+<arg>21</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T09:57:15.578150" elapsed="0.226397"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T09:57:15.804547" level="INFO">Clicking element '//option[contains(text(),"Brazil")]'.</msg>
+<arg>${option_country}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T09:57:15.804547" elapsed="0.087763"/>
+</kw>
+<status status="PASS" start="2024-03-21T09:57:14.399861" elapsed="1.492449"/>
+</kw>
+<kw name="Clicar em submit">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T09:57:15.894305" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
+<arg>${input_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T09:57:15.893309" elapsed="0.799873"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T09:57:21.693239" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T09:57:16.693182" elapsed="5.000057"/>
+</kw>
+<status status="PASS" start="2024-03-21T09:57:15.893309" elapsed="5.799930"/>
+</kw>
+<kw name="Fechar navegador">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-21T09:57:21.695233" elapsed="2.495598"/>
+</kw>
+<status status="PASS" start="2024-03-21T09:57:21.694236" elapsed="2.496595"/>
+</kw>
+<status status="PASS" start="2024-03-21T09:57:09.782178" elapsed="14.409610"/>
+</test>
+<status status="PASS" start="2024-03-21T09:57:09.249603" elapsed="14.944179"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-21T09:57:10.814417" level="WARN">The chromedriver version (122.0.6261.128) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
