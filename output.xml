@@ -1,85 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-03-21T09:57:09.246611" rpa="false" schemaversion="5">
-<suite id="s1" name="Form" source="C:\Users\gnaga\OneDrive\Desktop\aprendendo-robotframework\form.robot">
-<test id="s1-t1" name="Cenário 1: Preencher formulário" line="29">
-<kw name="Abrir navegador e acessar o site">
+<robot generator="Robot 7.0 (Python 3.11.0 on win32)" generated="2024-03-21T11:41:19.694288" rpa="false" schemaversion="5">
+<suite id="s1" name="Bdd" source="C:\Users\gnaga\OneDrive\Desktop\aprendendo-robotframework\bdd.robot">
+<test id="s1-t1" name="Cenário 1: Executar vídeo no site do youtube" line="40">
+<kw name="Dado que eu acesso o site do youtube">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-21T09:57:09.785170" level="INFO">Opening browser 'chrome' to base url 'https://testpages.eviltester.com/styled/validation/input-validation.html'.</msg>
-<msg time="2024-03-21T09:57:10.814417" level="WARN">The chromedriver version (122.0.6261.128) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://testpages.eviltester.com/styled/validation/input-validation.html</arg>
-<arg>chrome</arg>
+<msg time="2024-03-21T11:41:19.978529" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<msg time="2024-03-21T11:41:20.657525" level="WARN">The chromedriver version (122.0.6261.128) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-21T09:57:09.785170" elapsed="4.609701"/>
+<status status="PASS" start="2024-03-21T11:41:19.978529" elapsed="7.625067"/>
 </kw>
-<status status="PASS" start="2024-03-21T09:57:09.783176" elapsed="4.611695"/>
+<status status="PASS" start="2024-03-21T11:41:19.977532" elapsed="7.626064"/>
 </kw>
-<kw name="Preencher campos">
+<kw name="Quando digito o nome da música">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-21T09:57:14.402851" level="INFO">Typing text 'Gabriela' into text field 'id:firstname'.</msg>
-<arg>${input_first_name}</arg>
-<arg>Gabriela</arg>
+<msg time="2024-03-21T11:41:27.604594" level="INFO">Typing text 'Twenty One Pilots Stressed Out' into text field '//input[@id="search"]'.</msg>
+<arg>${input_pesquisa}</arg>
+<arg>${nome_da_musica}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-21T09:57:14.401853" elapsed="0.790329"/>
+<status status="PASS" start="2024-03-21T11:41:27.604594" elapsed="0.824846"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-21T09:57:15.193180" level="INFO">Typing text 'Testando da Silva' into text field 'id:surname'.</msg>
-<arg>${input_last_name}</arg>
-<arg>Testando da Silva</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-21T09:57:15.192182" elapsed="0.384971"/>
+<status status="PASS" start="2024-03-21T11:41:27.604594" elapsed="0.824846"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-21T09:57:15.578150" level="INFO">Typing text '21' into text field 'id:age'.</msg>
-<arg>${input_age}</arg>
-<arg>21</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-21T09:57:15.578150" elapsed="0.226397"/>
+<kw name="E clico no botão buscar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:41:28.493271" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<arg>${button_pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:41:28.493271" elapsed="0.189692"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:41:28.492274" elapsed="0.190689"/>
+</kw>
+<kw name="E clico na primeira opção da lista">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${primeiro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T11:41:28.685955" elapsed="1.666459"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-21T09:57:15.804547" level="INFO">Clicking element '//option[contains(text(),"Brazil")]'.</msg>
-<arg>${option_country}</arg>
+<msg time="2024-03-21T11:41:30.352414" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<arg>${primeiro}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-21T09:57:15.804547" elapsed="0.087763"/>
+<status status="PASS" start="2024-03-21T11:41:30.352414" elapsed="1.063667"/>
 </kw>
-<status status="PASS" start="2024-03-21T09:57:14.399861" elapsed="1.492449"/>
+<status status="PASS" start="2024-03-21T11:41:28.684958" elapsed="2.731123"/>
 </kw>
-<kw name="Clicar em submit">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-21T09:57:15.894305" level="INFO">Clicking element '//input[@type="submit"]'.</msg>
-<arg>${input_submit}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-21T09:57:15.893309" elapsed="0.799873"/>
+<kw name="Então o vídeo é executado">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:42:01.686339" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-21T11:42:01.687335" level="FAIL">Element '//tp-yt-paper-button[@id="label"]' not visible after 30 seconds.</msg>
+<arg>${prova}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-03-21T11:41:31.418076" elapsed="30.272253">Element '//tp-yt-paper-button[@id="label"]' not visible after 30 seconds.</status>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>${prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-03-21T11:42:01.690329" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-21T09:57:21.693239" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
+<arg>30s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-21T09:57:16.693182" elapsed="5.000057"/>
+<status status="NOT RUN" start="2024-03-21T11:42:01.691332" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-03-21T09:57:15.893309" elapsed="5.799930"/>
-</kw>
-<kw name="Fechar navegador">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-03-21T09:57:21.695233" elapsed="2.495598"/>
+<status status="NOT RUN" start="2024-03-21T11:42:01.691332" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-03-21T09:57:21.694236" elapsed="2.496595"/>
+<status status="FAIL" start="2024-03-21T11:41:31.417078" elapsed="30.274254">Element '//tp-yt-paper-button[@id="label"]' not visible after 30 seconds.</status>
 </kw>
-<status status="PASS" start="2024-03-21T09:57:09.782178" elapsed="14.409610"/>
+<status status="FAIL" start="2024-03-21T11:41:19.976534" elapsed="41.715789">Element '//tp-yt-paper-button[@id="label"]' not visible after 30 seconds.</status>
 </test>
-<status status="PASS" start="2024-03-21T09:57:09.249603" elapsed="14.944179"/>
+<status status="FAIL" start="2024-03-21T11:41:19.697284" elapsed="41.998048"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Form">Form</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Bdd">Bdd</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-03-21T09:57:10.814417" level="WARN">The chromedriver version (122.0.6261.128) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-03-21T11:41:20.657525" level="WARN">The chromedriver version (122.0.6261.128) detected in PATH at C:\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (123.0.6312.58); currently, chromedriver 123.0.6312.58 is recommended for chrome 123.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
